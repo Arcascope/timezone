@@ -372,9 +372,7 @@ class TZDateTime implements DateTime {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        other is TZDateTime &&
-            _native.isAtSameMomentAs(other._native) &&
-            location == other.location;
+        other is TZDateTime && _native.isAtSameMomentAs(other._native);
   }
 
   /// Returns true if [this] occurs before [other].
